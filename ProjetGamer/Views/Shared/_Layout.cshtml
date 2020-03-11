@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mon application ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <nav>
+        <ul>
+            <li>
+                link 1
+            </li>
+            <li>
+                link 2
+            </li>
+            <li>
+                link 3
+            </li>
+            <li>
+                link 4
+            </li>
+        </ul>               
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+    <footer>
+
+
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
