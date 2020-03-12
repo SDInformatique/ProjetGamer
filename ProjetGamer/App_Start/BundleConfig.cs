@@ -20,7 +20,11 @@ namespace ProjetGamer
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/site.css"));
+                      "~/Content/Site.css",
+                      "~/Content/nucleo-icons.css",
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/black-dashboard.css?v=1.0.0"
+                      ));
         }
     }
 }
