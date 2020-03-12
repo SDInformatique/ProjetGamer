@@ -5,7 +5,7 @@ namespace ProjetGamer
 {
     public class BundleConfig
     {
-        // Pour plus d'informations sur le regroupement, visitez https://go.microsoft.com/fwlink/?LinkId=301862
+
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
@@ -13,18 +13,20 @@ namespace ProjetGamer
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
-
-            // Utilisez la version de développement de Modernizr pour le développement et l'apprentissage. Puis, une fois
-            // prêt pour la production, utilisez l'outil de génération à l'adresse https://modernizr.com pour sélectionner uniquement les tests dont vous avez besoin.
+            
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/Site.css",
-                      "~/Content/nucleo-icons.css",
-                      "~/Content/bootstrap.min.css",
-                      "~/Content/black-dashboard.css?v=1.0.0"
-                      ));
+
+            bundles.Add(new ScriptBundle("~/bundles/core").Include(
+                "~/Scripts/jquery-3.4.1.js",
+                "~/Scripts/core/popper.min.js",
+                "~/Scripts/core/bootstrap.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/plugins").Include(
+                "~/Scripts/plugins/perfect-scrollbar.jquery.min.js",
+                "~/Scripts/plugins/chartjs.min.js",
+                "~/Scripts/plugins/bootstrap-notify.js"
+                ));
         }
     }
 }
