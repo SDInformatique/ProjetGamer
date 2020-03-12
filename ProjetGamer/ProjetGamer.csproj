@@ -162,13 +162,18 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Configurator.cshtml" />
+    <Content Include="Views\Home\PCPreBuilt_List.cshtml" />
+    <Content Include="Views\Home\SRVPreBuilt_List.cshtml" />
+    <Content Include="Views\Home\UserProfile.cshtml" />
+    <Content Include="Views\Home\MyOrder.cshtml" />
+    <Content Include="Views\Home\MyConfiguration.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\PG\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

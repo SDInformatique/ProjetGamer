@@ -12,18 +12,34 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+        public ActionResult PCPreBuilt_List()
         {
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.Message = "PC Gamer";
             return View();
         }
-
-        public ActionResult Contact()
+        public ActionResult SRVPreBuilt_List()
         {
-            ViewBag.Message = "Your contact page.";
-
+            ViewBag.Message = "Serveur";
+            return View();
+        }
+        public ActionResult Configurator()
+        {
+            ViewBag.Message = "Configurator";
+            return View();
+        }
+        public ActionResult UserProfile()
+        {
+            ViewBag.Message = "Votre Profile";
+            return View();
+        }
+        public ActionResult MyOrder()
+        {
+            ViewBag.Message = "Vos Commandes";
+            return View();
+        }
+        public ActionResult MyConfiguration()
+        {
+            ViewBag.Message = "Vos Configuration";
             return View();
         }
     }
