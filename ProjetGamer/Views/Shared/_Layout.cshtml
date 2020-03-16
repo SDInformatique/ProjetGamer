@@ -1,4 +1,6 @@
-﻿
+﻿@{ 
+    bool isLogged = true;
+}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +20,9 @@
     <!-- CSS Files -->
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/black-dashboard.css" rel="stylesheet" />
-
+    <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body class=" ">
@@ -65,28 +69,44 @@
                     <li>
                         <a href="/Home/UserProfile">
                             <i class="tim-icons icon-puzzle-10"></i>
-                            <p>Profil</p>
+                            @{
+                                if (isLogged == true)
+                                {
+                                    <p>Profil</p>
+                                }
+                                else
+                                {
+                                    <p>Se connecter</p>
+                                }
+                            }
                         </a>
                     </li>
-                    <li>
-                        <a href="/Home/MyOrder">
-                            <i class="tim-icons icon-align-center"></i>
-                            <p>Mes Commandes</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Home/MyConfiguration">
-                            <i class="tim-icons icon-world"></i>
-                            <p>Mes Configurations</p>
-                        </a>
-                    </li>
+                    @{
+                        if (isLogged == true)
+                        {
+                            <li>
+                                <a href="/Home/MyOrder">
+                                    <i class="tim-icons icon-align-center"></i>
+                                    <p>Mes Commandes</p>
+                                </a>
+                            </li>
+                        } }
+                    @{
+                        if (isLogged == true)
+                        {
+                            <li>
+                                <a href="/Home/MyConfiguration">
+                                    <i class="tim-icons icon-world"></i>
+                                    <p>Mes Configurations</p>
+                                </a>
+                            </li>
+                        } }
                 </ul>
             </div>
         </div>
         <!-- End  Sidebar -->
 
         <div class="main-panel">
-
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent   ">
                 <div class="container-fluid">
@@ -107,64 +127,11 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navigation">
                         <ul class="navbar-nav ml-auto ">
-                            <div class="search-bar input-group">
-                                <li class="dropdown nav-item">
-                                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                        <div class="notification d-none d-lg-block d-xl-block"></div>
-                                        <i class="tim-icons icon-sound-wave"></i>
-                                        <p class="d-lg-none">
-                                            New Notifications
-                                        </p>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">Mike John responded to your email</a>
-                                        </li>
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">You have 5 more tasks</a>
-                                        </li>
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">Your friend Michael is in town</a>
-                                        </li>
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">Another notification</a>
-                                        </li>
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">Another one</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown nav-item">
-                                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                        <div class="photo">
-                                            <img src="../assets/img/anime3.png">
-                                        </div>
-                                        <b class="caret d-none d-lg-block d-xl-block"></b>
-                                        <p class="d-lg-none">
-                                            Log out
-                                        </p>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-navbar">
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">Profile</a>
-                                        </li>
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">Settings</a>
-                                        </li>
-                                        <div class="dropdown-divider"></div>
-                                        <li class="nav-link">
-                                            <a href="#" class="nav-item dropdown-item">Log out</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="separator d-lg-none"></li>
-                            </div>
                         </ul>
                     </div>
                 </div>
             </nav>
             <!-- End Navbar -->
-
             <!-- Page Content -->
             <div class="content">
                 @RenderBody();
@@ -205,7 +172,8 @@
     @Scripts.Render("~/bundles/core");
     @Scripts.Render("~/bundles/plugins")
     <script src="~/Scripts/black-dashboard.min.js" type="text/javascript"></script>
-    
+    <script src="~/Scripts/black-dashboard.js"></script>
+    <script src="~/Scripts/Site.js"></script>
     <script>
         $(document).ready(function () {
             $().ready(function () {
@@ -317,13 +285,5 @@
             });
         });
     </script>
-    <script>
-        $(document).ready(function () {
-            // Javascript method's body can be found in assets/js/demos.js
-            demo.initDashboardPageCharts();
-
-        });
-    </script>
 </body>
-
 </html>
