@@ -18,6 +18,11 @@ namespace ProjetGamer
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+                name: "Configurator",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Configurator", action = "ConfigType", id = UrlParameter.Optional }
+            );
         }
     }
 }
