@@ -13,7 +13,19 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
-        public ActionResult ConfigComponent()
+        public ActionResult ConfigComponents()
+        {
+            return View();
+        }
+        public ActionResult CaseChoice()
+        {
+            return View();
+        }
+        public ActionResult CpuChoice()
+        {
+            return View();
+        }
+        public ActionResult GpuChoice()
         {
             return View();
         }

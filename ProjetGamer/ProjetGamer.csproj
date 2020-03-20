@@ -200,7 +200,10 @@
     <Content Include="Views\Home\UserProfile.cshtml" />
     <Content Include="Views\Home\MyOrder.cshtml" />
     <Content Include="Views\Home\MyConfiguration.cshtml" />
-    <Content Include="Views\Configurator\ConfigComponent.cshtml" />
+    <Content Include="Views\Configurator\ConfigComponents.cshtml" />
+    <Content Include="Views\Configurator\CaseChoice.cshtml" />
+    <Content Include="Views\Configurator\CpuChoice.cshtml" />
+    <Content Include="Views\Configurator\GpuChoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

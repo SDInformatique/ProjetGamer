@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewBag.Title = "ConfigComponent";
+    var configPrice = 2759;
+
+    
+}
+
+<h1 class="title title-up">Composants Principaux</h1>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">           
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-6">                  
+                        <h2 class="card-title">Résumé de la configuration</h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4 class="d-inline" >Prix Total :</h4>
+                        <h4 class="text-primary config-pricing d-inline"> @configPrice </h4>
+                        <h4 class="d-inline"> chf</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-12 text-left">
+                        <h2 class="card-title">Boitier</h2>
+                        <h5 class="card-subtitle">Veuillez choisir un boitier</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <a href="CaseChoice" class="btn btn-primary btn-simple animation-on-hover">Choisir</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-12 text-left">
+                        <h2 class="card-title">Boitier choisi</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="text-left">
+                    <h5 class="card-subtitle">Aucun</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-12 text-left">
+                        <h2 class="card-title">Processeur </h2>
+                        <h5 class="card-subtitle">Veuillez choisir un processeur</h5>
+                        <h5></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <a href="CpuChoice" class="btn btn-primary btn-simple animation-on-hover">Choisir</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-12 text-left">
+                        <h2 class="card-title">Processeur choisi </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-subtitle">Aucun</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-12 text-left">
+                        <h2 class="card-title">Carte Graphique </h2>
+                        <h5 class="card-subtitle">Veuillez choisir une carte graphique</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <a href="GpuChoice" class="btn btn-primary btn-simple animation-on-hover">Choisir</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-12 text-left">
+                        <h2 class="card-title">Carte Graphique choisie</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-subtitle">Aucune</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="float-lg-left">
+                    <button type="reset" class="btn btn-primary btn-simple animation-on-hover">Annuler</button>
+                </div>
+                <div class="float-lg-right">
+                    <a href="" class="btn btn-primary btn-simple animation-on-hover disabled">Suivant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
