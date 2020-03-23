@@ -1,3 +1,141 @@
-﻿@{ 
+﻿@{
     ViewBag.Title = "Choix boitier";
+    var choosedCase = 0;
 }
+<h1 class="title title-up">Composants Principaux</h1>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">Choix du boitier</h2>
+                        <h5 class="card-subtitle">Veuillez choisir un boitier pour votre configuration</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3 col-sm-6">
+        <div id="case1" name="case" class="card">
+            <a href="~/Assets/img/computerCases/Case1.png" target="_blank" class="card-link">
+                <div class="card-img-top">
+                    <img class="card-img image-list" src="~/Assets/img/computerCases/Case1.png" />
+                </div>
+            </a>
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">Boitier 1</h2>
+                        <h5 class="card-subtitle"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <button id="btnCase1" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(1)">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div id="case2" name="case" class="card">
+            <a href="~/Assets/img/computerCases/Case2.png" target="_blank" class="card-link">
+                <div class="card-img-top">
+                    <img class="card-img image-list" src="~/Assets/img/computerCases/Case2.png" />
+                </div>
+            </a>
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">Boitier 2</h2>
+                        <h5 class="card-subtitle"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <button id="btnCase2" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(2)">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div id="case3" name="case" class="card">
+            <a href="~/Assets/img/computerCases/Case3.png" target="_blank" class="card-link">
+                <div class="card-img-top">
+                    <img class="card-img image-list" src="~/Assets/img/computerCases/Case3.jpg" />
+                </div>
+            </a>
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">Boitier 3</h2>
+                        <h5 class="card-subtitle"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <button id="btnCase3" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(3)">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div id="case4" name="case" class="card">
+            <a href="~/Assets/img/computerCases/Case4.png" target="_blank" class="card-link">
+                <div class="card-img-top">
+                    <img class="card-img image-list" src="~/Assets/img/computerCases/Case4.jpg" />
+                </div>
+            </a>
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">Boitier 4</h2>
+                        <h5 class="card-subtitle"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <button id="btnCase4" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(4)">Ajouter</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="float-lg-left">
+                    <a href="ConfigComponents" class="btn btn-primary btn-simple animation-on-hover">Retour</a>
+                </div>
+                <div class="float-lg-right">
+                    <a href="" onclick="javascript:nextPage(@choosedCase)" class="btn btn-primary btn-simple animation-on-hover disabled">Suivant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function chooseItem(id) {
+        var cases = document.getElementsByName("case")
+        if (cases != null) {
+            //todo Disable the selected-item class when selecting another item
+            //todo Same as above but with the button and the disabled class
+            cases.className -= "selected-item";
+            
+        }
+        var acase = document.getElementById("case"+id); 
+        var btnCase = document.getElementById("btnCase"+id); 
+        acase.className += " selected-item"; 
+        btnCase.className += " disabled"; 
+    }
+    function nextPage(data) {
+        $.ajax({
+            url: ConfigComponents,
+            type: POST,
+            data: data
+        });
+    }
+</script>
