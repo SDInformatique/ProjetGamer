@@ -148,6 +148,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\img\computerCases\Case1.png" />
+    <Content Include="Assets\img\computerCases\Case2.png" />
+    <Content Include="Assets\img\computerCases\Case3.jpg" />
+    <Content Include="Assets\img\computerCases\Case4.jpg" />
+    <Content Include="Assets\img\computerCases\Case5.jpg" />
+    <Content Include="Assets\img\computerCases\Case6.jpg" />
+    <Content Include="Assets\img\computerCases\Case7.jpg" />
+    <Content Include="Assets\img\computerCases\Case8.png" />
+    <Content Include="Assets\img\computerCases\Case9.jpg" />
+    <Content Include="Assets\img\computerCases\Case10.jpg" />
     <Content Include="Content\black-dashboard.css" />
     <Content Include="Content\black-dashboard.min.css" />
     <Content Include="Content\bootstrap.min.css" />
