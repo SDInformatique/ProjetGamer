@@ -2,8 +2,16 @@
 @{
     ViewBag.Title = "ConfigComponent";
     var configPrice = 2759;
+    var caseID = 0;
+    var cpuID = 0;
+    var gpuID = 0;
 
-    
+
+    if(Session["choosedCaseID"] != null)
+    {
+        caseID = Session["choosedCaseID"].ToString().AsInt();
+    }
+
 }
 
 <h1 class="title title-up">Composants Principaux</h1>
@@ -59,7 +67,16 @@
             </div>
             <div class="card-body">
                 <div class="text-left">
-                    <h5 class="card-subtitle">Aucun</h5>
+                    @{
+                        if (caseID == 0)
+                        {
+                            <h5 class="card-subtitle">Aucun</h5>
+                        }
+                        else
+                        {
+                            <h5 class="card-subtitle">Boitier n @caseID </h5>
+                        }
+                    }
                 </div>
             </div>
         </div>

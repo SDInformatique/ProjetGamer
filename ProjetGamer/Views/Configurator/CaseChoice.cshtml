@@ -1,6 +1,15 @@
 ﻿@{
     ViewBag.Title = "Choix boitier";
-    var choosedCase = 0;
+
+    if (IsPost)
+    {
+        var choosedCase = Request.Form["data"];
+        if(choosedCase != null)
+        {
+            Session.Add("choosedCaseID",choosedCase);
+            Response.Redirect("ConfigComponants");
+        }
+    }
 }
 <h1 class="title title-up">Composants Principaux</h1>
 <div class="row">
@@ -110,7 +119,7 @@
                     <a href="ConfigComponents" class="btn btn-primary btn-simple animation-on-hover">Retour</a>
                 </div>
                 <div class="float-lg-right">
-                    <a href="" onclick="javascript:nextPage(@choosedCase)" class="btn btn-primary btn-simple animation-on-hover disabled">Suivant</a>
+                    <a href="" onclick="javascript:nextPage()" class="btn btn-primary btn-simple animation-on-hover disabled">Suivant</a>
                 </div>
             </div>
         </div>
@@ -119,23 +128,21 @@
 
 <script>
     function chooseItem(id) {
-        var cases = document.getElementsByName("case")
-        if (cases != null) {
-            //todo Disable the selected-item class when selecting another item
-            //todo Same as above but with the button and the disabled class
-            cases.className -= "selected-item";
-            
-        }
+        $('.selected-item').removeClass('selected-item');
+        $('.disabled').removeClass('disabled');    
+    
         var acase = document.getElementById("case"+id); 
         var btnCase = document.getElementById("btnCase"+id); 
         acase.className += " selected-item"; 
         btnCase.className += " disabled"; 
-    }
-    function nextPage(data) {
+    };
+    function nextPage() {
+        var caseID = $('.selected-item').id;
+        
         $.ajax({
-            url: ConfigComponents,
+            url: this.url,
             type: POST,
-            data: data
+            data: caseID
         });
-    }
+    };
 </script>
