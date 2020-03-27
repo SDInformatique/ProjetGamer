@@ -3,7 +3,7 @@
 
     if (IsPost)
     {
-        var choosedCase = Request.Form["data"];
+        var choosedCase = Request.Form["hiddenChoosedCase"];
         if(choosedCase != null)
         {
             Session.Add("choosedCaseID",choosedCase);
@@ -11,6 +11,22 @@
         }
     }
 }
+    <script>
+        function chooseItem(id) {
+            $('.selected-item').removeClass('selected-item');
+            $('.disabled').removeClass('disabled');
+
+            var acase = document.getElementById("case" + id);
+            var btnCase = document.getElementById("btnCase" + id);
+            acase.className += " selected-item";
+            btnCase.className += " disabled";
+            $('#hiddenChoosedCase').val = caseID;
+        };
+        function nextPage() {
+            var caseID = $('.selected-item').id;
+            document.getElementById("dataForm").submit();
+        };
+    </script>
 <h1 class="title title-up">Composants Principaux</h1>
 <div class="row">
     <div class="col-lg-12">
@@ -126,23 +142,7 @@
     </div>
 </div>
 
-<script>
-    function chooseItem(id) {
-        $('.selected-item').removeClass('selected-item');
-        $('.disabled').removeClass('disabled');    
-    
-        var acase = document.getElementById("case"+id); 
-        var btnCase = document.getElementById("btnCase"+id); 
-        acase.className += " selected-item"; 
-        btnCase.className += " disabled"; 
-    };
-    function nextPage() {
-        var caseID = $('.selected-item').id;
-        
-        $.ajax({
-            url: this.url,
-            type: POST,
-            data: caseID
-        });
-    };
-</script>
+<form action="CaseChoice" method="post" id="dataForm">
+    <input type="hidden" id="hiddenChoosedCase" />
+</form>
+
