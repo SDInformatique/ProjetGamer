@@ -1,21 +1,31 @@
 ﻿
 @{
     ViewBag.Title = "CpuChoice";
+
+    if (IsPost)
+    {
+        var selectedCpu = Request.Form["chooseItem"];
+        Session.Add("selectedCpu", selectedCpu);
+        Response.Redirect("~/ConfigComponents");
+    }
 }
 <script>
     function chooseItem(id) {
         $('.selected-item').removeClass('selected-item');
         $('.disabled').removeClass('disabled');
 
-        var acase = document.getElementById("cpu" + id);
-        var btnCase = document.getElementById("btncpu" + id);
-        acase.className += " selected-item";
-        btnCase.className += " disabled";
-        $('#hiddenChoosedcpu').val = caseID;
+        var selectedItem = document.getElementById("cpu" + id);
+        var selectedItemBtn = document.getElementById("btncpu" + id);
+        selectedItem.className += " selected-item";
+        selectedItemBtn.className += " disabled";
+        document.getElementById('hiddenChoosedcpu').value = selectedItem.id; 
     };
     function nextPage() {
-        var caseID = $('.selected-item').id;
-        document.getElementById("dataForm").submit();
+        var choosedItem = document.getElementById('hiddenChoosedcpu').value;
+        $.post("CpuChoice", {
+            chooseItem: choosedItem
+
+        });
     };
 </script>
 <h1 class="title title-up">Composants Principaux</h1>
@@ -25,8 +35,8 @@
             <div class="card-header ">
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                        <h2 class="card-title">Choix du boitier</h2>
-                        <h5 class="card-subtitle">Veuillez choisir un boitier pour votre configuration</h5>
+                        <h2 class="card-title">Choix du processeur</h2>
+                        <h5 class="card-subtitle">Veuillez choisir un processeur pour votre configuration</h5>
                     </div>
                 </div>
             </div>
@@ -41,13 +51,13 @@
         <div id="cpu1" name="cpu" class="card">
             <a href="~/Assets/img/computercpus/cpu1.png" target="_blank" class="card-link">
                 <div class="card-img-top">
-                    <img class="card-img image-list" src="~/Assets/img/computercpus/cpu1.png" />
+                    <img class="card-img image-list" src="~/Assets/img/computercpus/cpu1.jpg" />
                 </div>
             </a>
             <div class="card-header ">
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                        <h2 class="card-title">Boitier 1</h2>
+                        <h2 class="card-title">Processeur 1</h2>
                         <h5 class="card-subtitle"></h5>
                     </div>
                 </div>
@@ -61,13 +71,13 @@
         <div id="cpu2" name="cpu" class="card">
             <a href="~/Assets/img/computercpus/cpu2.png" target="_blank" class="card-link">
                 <div class="card-img-top">
-                    <img class="card-img image-list" src="~/Assets/img/computercpus/cpu2.png" />
+                    <img class="card-img image-list" src="~/Assets/img/computercpus/cpu2.jpg" />
                 </div>
             </a>
             <div class="card-header ">
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                        <h2 class="card-title">Boitier 2</h2>
+                        <h2 class="card-title">Processeur 2</h2>
                         <h5 class="card-subtitle"></h5>
                     </div>
                 </div>
@@ -87,7 +97,7 @@
             <div class="card-header ">
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                        <h2 class="card-title">Boitier 3</h2>
+                        <h2 class="card-title">Processeur 3</h2>
                         <h5 class="card-subtitle"></h5>
                     </div>
                 </div>
@@ -107,7 +117,7 @@
             <div class="card-header ">
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                        <h2 class="card-title">Boitier 4</h2>
+                        <h2 class="card-title">Processeur 4</h2>
                         <h5 class="card-subtitle"></h5>
                     </div>
                 </div>
@@ -134,6 +144,6 @@
 </div>
 
 <form action="cpuChoice" method="post" id="dataForm">
-    <input type="hidden" id="hiddenChoosedcpu" />
+    <input type="hidden" id="hiddenChoosedcpu"/>
 </form>
 
