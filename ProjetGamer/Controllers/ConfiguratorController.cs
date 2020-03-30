@@ -17,6 +17,14 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
+        public ActionResult ConfigStorage()
+        {
+            return View();
+        }
+
+
+
+
         public ActionResult CaseChoice()
         {
             return View();
@@ -29,5 +37,10 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
+        public ActionResult StorageChoice()
+        {
+            return View();
+        }
+
     }
 }

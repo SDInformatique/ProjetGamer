@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "RAM Choice";
+
+    if (IsPost)
+    {
+        var selectedCpu = Request.Form["chooseItem"];
+        Session.Add("selectedCpu", selectedCpu);
+        Response.Redirect("~/ConfigComponents");
+    }
+}
+
+<h1 class="title title-up">Composants Principaux</h1>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">Choix du processeur</h2>
+                        <h5 class="card-subtitle">Veuillez choisir un processeur pour votre configuration</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3 col-sm-6">
+        <div id="item1" name="item" class="card">
+            <a href="~/Assets/img/computerrams/ram1.png" target="_blank" class="card-link">
+                <div class="card-img-top">
+                    <img class="card-img image-list" src="~/Assets/img/computerrams/ram1.jpg" />
+                </div>
+            </a>
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">Processeur 1</h2>
+                        <h5 class="card-subtitle"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <button id="btnItem1" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(1)">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div id="item2" name="item" class="card">
+            <a href="~/Assets/img/computerrams/ram2.png" target="_blank" class="card-link">
+                <div class="card-img-top">
+                    <img class="card-img image-list" src="~/Assets/img/computerrams/ram2.jpg" />
+                </div>
+            </a>
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">Processeur 2</h2>
+                        <h5 class="card-subtitle"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <button id="btnItem2" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(2)">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div id="item3" name="item" class="card">
+            <a href="~/Assets/img/computerrams/ram3.png" target="_blank" class="card-link">
+                <div class="card-img-top">
+                    <img class="card-img image-list" src="~/Assets/img/computerrams/ram3.jpg" />
+                </div>
+            </a>
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">Processeur 3</h2>
+                        <h5 class="card-subtitle"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <button id="btnItem3" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(3)">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div id="item4" name="item" class="card">
+            <a href="~/Assets/img/computerrams/ram4.png" target="_blank" class="card-link">
+                <div class="card-img-top">
+                    <img class="card-img image-list" src="~/Assets/img/computerrams/ram4.jpg" />
+                </div>
+            </a>
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">Processeur 4</h2>
+                        <h5 class="card-subtitle"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <button id="btnItem4" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(4)">Ajouter</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="float-lg-left">
+                    <a href="ConfigComponents" class="btn btn-primary btn-simple animation-on-hover">Retour</a>
+                </div>
+                <div class="float-lg-right">
+                    <a href="" onclick="javascript:nextPage()" class="btn btn-primary btn-simple animation-on-hover disabled">Suivant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form action="itemChoice" method="post" id="dataForm">
+    <input type="hidden" id="hiddenChoosedItem" />
+</form>
+<script type="text/javascript" src="~/Scripts/configurator.js"></script>

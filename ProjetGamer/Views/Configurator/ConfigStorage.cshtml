@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "ConfigStorage";
+    var configPrice = 0;
+    var totalStorage = 0;
+
+}
+
+<h1 class="title title-up">Configuration du Stockage</h1>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="card-title">Résumé de la configuration</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4 class="d-inline">Prix Total :</h4>
+                        <h4 class="text-primary config-pricing d-inline"> @configPrice </h4>
+                        <h4 class="d-inline"> chf</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="spacer-tb-2"></div>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Résumé Stockage</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4 class="d-inline">Stockage Total :</h4>
+                        <h4 class="text-primary config-pricing d-inline"> @totalStorage </h4>
+                        <h4 class="d-inline"> Go</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="card-title">Disque principal</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="StorageChoice" class="btn btn-primary btn-simple animation-on-hover">Suivant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="card-title">Disque secondaire</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="StorageChoice" class="btn btn-primary btn-simple animation-on-hover">Suivant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-primary btn-simple animation-on-hover">
+                            <i class="material-icons btn-icon" aria-hidden="true">add</i>
+                            <span class="">Ajouter</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="float-lg-left">
+                    <button type="reset" class="btn btn-primary btn-simple animation-on-hover">Annuler</button>
+                </div>
+                <div class="float-lg-right">
+                    <a href="ConfigStorage" class="btn btn-primary animation-on-hover ">Suivant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
