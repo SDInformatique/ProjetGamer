@@ -145,6 +145,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +176,7 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\black-dashboard.js" />
     <Content Include="Scripts\black-dashboard.min.js" />
+    <Content Include="Scripts\configurator.js" />
     <Content Include="Scripts\core\bootstrap.min.js" />
     <Content Include="Scripts\core\jquery.min.js" />
     <Content Include="Scripts\core\popper.min.js" />
@@ -214,11 +216,13 @@
     <Content Include="Views\Configurator\CaseChoice.cshtml" />
     <Content Include="Views\Configurator\CpuChoice.cshtml" />
     <Content Include="Views\Configurator\GpuChoice.cshtml" />
+    <Content Include="Views\Configurator\RamChoice.cshtml" />
+    <Content Include="Views\Configurator\ConfigStorage.cshtml" />
+    <Content Include="Views\Configurator\StorageChoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assets\img\computercpu\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
