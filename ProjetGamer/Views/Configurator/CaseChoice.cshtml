@@ -11,22 +11,7 @@
         }
     }
 }
-    <script>
-        function chooseItem(id) {
-            $('.selected-item').removeClass('selected-item');
-            $('.disabled').removeClass('disabled');
 
-            var acase = document.getElementById("case" + id);
-            var btnCase = document.getElementById("btnCase" + id);
-            acase.className += " selected-item";
-            btnCase.className += " disabled";
-            $('#hiddenChoosedCase').val = caseID;
-        };
-        function nextPage() {
-            var caseID = $('.selected-item').id;
-            document.getElementById("dataForm").submit();
-        };
-    </script>
 <h1 class="title title-up">Composants Principaux</h1>
 <div class="row">
     <div class="col-lg-12">
@@ -47,7 +32,7 @@
 </div>
 <div class="row">
     <div class="col-lg-3 col-sm-6">
-        <div id="case1" name="case" class="card">
+        <div id="item1" name="item" class="card">
             <a href="~/Assets/img/computerCases/Case1.png" target="_blank" class="card-link">
                 <div class="card-img-top">
                     <img class="card-img image-list" src="~/Assets/img/computerCases/Case1.png" />
@@ -62,12 +47,12 @@
                 </div>
             </div>
             <div class="card-body">
-                <button id="btnCase1" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(1)">Ajouter</button>
+                <button id="btnItem1" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(1)">Ajouter</button>
             </div>
         </div>
     </div>
     <div class="col-lg-3 col-sm-6">
-        <div id="case2" name="case" class="card">
+        <div id="item2" name="item" class="card">
             <a href="~/Assets/img/computerCases/Case2.png" target="_blank" class="card-link">
                 <div class="card-img-top">
                     <img class="card-img image-list" src="~/Assets/img/computerCases/Case2.png" />
@@ -82,12 +67,12 @@
                 </div>
             </div>
             <div class="card-body">
-                <button id="btnCase2" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(2)">Ajouter</button>
+                <button id="btnItem2" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(2)">Ajouter</button>
             </div>
         </div>
     </div>
     <div class="col-lg-3 col-sm-6">
-        <div id="case3" name="case" class="card">
+        <div id="item3" name="item" class="card">
             <a href="~/Assets/img/computerCases/Case3.png" target="_blank" class="card-link">
                 <div class="card-img-top">
                     <img class="card-img image-list" src="~/Assets/img/computerCases/Case3.jpg" />
@@ -102,12 +87,12 @@
                 </div>
             </div>
             <div class="card-body">
-                <button id="btnCase3" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(3)">Ajouter</button>
+                <button id="btnItem3" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(3)">Ajouter</button>
             </div>
         </div>
     </div>
     <div class="col-lg-3 col-sm-6">
-        <div id="case4" name="case" class="card">
+        <div id="item4" name="item" class="card">
             <a href="~/Assets/img/computerCases/Case4.png" target="_blank" class="card-link">
                 <div class="card-img-top">
                     <img class="card-img image-list" src="~/Assets/img/computerCases/Case4.jpg" />
@@ -122,7 +107,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <button id="btnCase4" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(4)">Ajouter</button>
+                <button id="btnItem4" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(4)">Ajouter</button>
             </div>
         </div>
     </div>
@@ -135,7 +120,7 @@
                     <a href="ConfigComponents" class="btn btn-primary btn-simple animation-on-hover">Retour</a>
                 </div>
                 <div class="float-lg-right">
-                    <a href="" onclick="javascript:nextPage()" class="btn btn-primary btn-simple animation-on-hover disabled">Suivant</a>
+                    <a href="" onclick="nextPage()" class="btn btn-primary btn-simple animation-on-hover disabled">Suivant</a>
                 </div>
             </div>
         </div>
@@ -143,6 +128,6 @@
 </div>
 
 <form action="CaseChoice" method="post" id="dataForm">
-    <input type="hidden" id="hiddenChoosedCase" />
+    <input type="hidden" id="hiddenChoosedItem" />
 </form>
-
+<script type="text/javascript" src="~/Scripts/configurator.js"></script>

@@ -9,25 +9,7 @@
         Response.Redirect("~/ConfigComponents");
     }
 }
-<script>
-    function chooseItem(id) {
-        $('.selected-item').removeClass('selected-item');
-        $('.disabled').removeClass('disabled');
 
-        var selectedItem = document.getElementById("cpu" + id);
-        var selectedItemBtn = document.getElementById("btncpu" + id);
-        selectedItem.className += " selected-item";
-        selectedItemBtn.className += " disabled";
-        document.getElementById('hiddenChoosedcpu').value = selectedItem.id; 
-    };
-    function nextPage() {
-        var choosedItem = document.getElementById('hiddenChoosedcpu').value;
-        $.post("CpuChoice", {
-            chooseItem: choosedItem
-
-        });
-    };
-</script>
 <h1 class="title title-up">Composants Principaux</h1>
 <div class="row">
     <div class="col-lg-12">
@@ -48,7 +30,7 @@
 </div>
 <div class="row">
     <div class="col-lg-3 col-sm-6">
-        <div id="cpu1" name="cpu" class="card">
+        <div id="item1" name="item" class="card">
             <a href="~/Assets/img/computercpus/cpu1.png" target="_blank" class="card-link">
                 <div class="card-img-top">
                     <img class="card-img image-list" src="~/Assets/img/computercpus/cpu1.jpg" />
@@ -63,12 +45,12 @@
                 </div>
             </div>
             <div class="card-body">
-                <button id="btncpu1" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(1)">Ajouter</button>
+                <button id="btnItem1" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(1)">Ajouter</button>
             </div>
         </div>
     </div>
     <div class="col-lg-3 col-sm-6">
-        <div id="cpu2" name="cpu" class="card">
+        <div id="item2" name="item" class="card">
             <a href="~/Assets/img/computercpus/cpu2.png" target="_blank" class="card-link">
                 <div class="card-img-top">
                     <img class="card-img image-list" src="~/Assets/img/computercpus/cpu2.jpg" />
@@ -83,12 +65,12 @@
                 </div>
             </div>
             <div class="card-body">
-                <button id="btncpu2" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(2)">Ajouter</button>
+                <button id="btnItem2" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(2)">Ajouter</button>
             </div>
         </div>
     </div>
     <div class="col-lg-3 col-sm-6">
-        <div id="cpu3" name="cpu" class="card">
+        <div id="item3" name="item" class="card">
             <a href="~/Assets/img/computercpus/cpu3.png" target="_blank" class="card-link">
                 <div class="card-img-top">
                     <img class="card-img image-list" src="~/Assets/img/computercpus/cpu3.jpg" />
@@ -103,12 +85,12 @@
                 </div>
             </div>
             <div class="card-body">
-                <button id="btncpu3" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(3)">Ajouter</button>
+                <button id="btnItem3" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(3)">Ajouter</button>
             </div>
         </div>
     </div>
     <div class="col-lg-3 col-sm-6">
-        <div id="cpu4" name="cpu" class="card">
+        <div id="item4" name="item" class="card">
             <a href="~/Assets/img/computercpus/cpu4.png" target="_blank" class="card-link">
                 <div class="card-img-top">
                     <img class="card-img image-list" src="~/Assets/img/computercpus/cpu4.jpg" />
@@ -123,7 +105,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <button id="btncpu4" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(4)">Ajouter</button>
+                <button id="btnItem4" class="btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(4)">Ajouter</button>
             </div>
         </div>
     </div>
@@ -136,14 +118,14 @@
                     <a href="ConfigComponents" class="btn btn-primary btn-simple animation-on-hover">Retour</a>
                 </div>
                 <div class="float-lg-right">
-                    <a href="" onclick="javascript:nextPage()" class="btn btn-primary btn-simple animation-on-hover disabled">Suivant</a>
+                    <a href="" onclick="nextPage()" class="btn btn-primary btn-simple animation-on-hover disabled">Suivant</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<form action="cpuChoice" method="post" id="dataForm">
-    <input type="hidden" id="hiddenChoosedcpu"/>
+<form action="itemChoice" method="post" id="dataForm">
+    <input type="hidden" id="hiddenChoosedItem"/>
 </form>
-
+<script type="text/javascript" src="~/Scripts/configurator.js"></script>
