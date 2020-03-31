@@ -149,6 +149,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\icons\CPU.png" />
     <Content Include="Assets\img\computerCases\Case1.png" />
     <Content Include="Assets\img\computerCases\Case2.png" />
     <Content Include="Assets\img\computerCases\Case3.jpg" />
@@ -159,6 +160,16 @@
     <Content Include="Assets\img\computerCases\Case8.png" />
     <Content Include="Assets\img\computerCases\Case9.jpg" />
     <Content Include="Assets\img\computerCases\Case10.jpg" />
+    <Content Include="Assets\img\computerStorage\hdd1.jpg" />
+    <Content Include="Assets\img\computerStorage\ssd1.jpg" />
+    <Content Include="Assets\img\computerStorage\ssd2.jpg" />
+    <Content Include="Assets\img\computerStorage\ssd3.jpg" />
+    <Content Include="Assets\img\computerStorage\ssd4.jpg" />
+    <Content Include="Assets\img\ShowCaseImg\Storage\HDD.jpg" />
+    <Content Include="Assets\img\computerStorage\hdd2.jpg" />
+    <Content Include="Assets\img\computerStorage\hdd3.jpg" />
+    <Content Include="Assets\img\computerStorage\hdd4.jpg" />
+    <Content Include="Assets\img\ShowCaseImg\Storage\SSD.jpg" />
     <Content Include="Content\black-dashboard.css" />
     <Content Include="Content\black-dashboard.min.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -218,7 +229,10 @@
     <Content Include="Views\Configurator\GpuChoice.cshtml" />
     <Content Include="Views\Configurator\RamChoice.cshtml" />
     <Content Include="Views\Configurator\ConfigStorage.cshtml" />
-    <Content Include="Views\Configurator\StorageChoice.cshtml" />
+    <Content Include="Views\Configurator\StorageTypeChoice.cshtml" />
+    <Content Include="Views\Configurator\HDDChoice.cshtml" />
+    <Content Include="Views\Configurator\SSDChoice.cshtml" />
+    <Content Include="Views\Configurator\ConfigChecklist.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
