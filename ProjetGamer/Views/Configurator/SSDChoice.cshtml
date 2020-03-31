@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewBag.Title = "SSDChoice";
+}
+
+<h1 class="title title-up">Configuration du Stockage</h1>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2 class="card-title">Choix d'un disque</h2>
+                        <h5 class="card-subtitle">Veuillez choisir un disque pour votre configuration</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3 col-sm-6">
+        <div id="item1" name="item" class="card">
+            <a href="~/Assets/img/computerStorage/ssd1.jpg" target="_blank" class="card-link">
+                <div class="card-img-top">
+                    <img class="card-img image-list" src="~/Assets/img/computerStorage/ssd1.jpg" />
+                </div>
+            </a>
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">SSD 1</h2>
+                        <h5 class="card-subtitle"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <button class="float-left btn btn-link btn-primary animation-on-hover">Details</button>
+                <button id="btnItem1" class="float-right btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(1)">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div id="item2" name="item" class="card">
+            <a href="~/Assets/img/computerStorage/ssd2.jpg" target="_blank" class="card-link">
+                <div class="card-img-top">
+                    <img class="card-img image-list" src="~/Assets/img/computerStorage/ssd2.jpg" />
+                </div>
+            </a>
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">SSD 2</h2>
+                        <h5 class="card-subtitle"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <button class="float-left btn btn-link btn-primary animation-on-hover">Details</button>
+                <button id="btnItem2" class="float-right btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(2)">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div id="item3" name="item" class="card">
+            <a href="~/Assets/img/computerStorage/ssd3.jpg" target="_blank" class="card-link">
+                <div class="card-img-top">
+                    <img class="card-img image-list" src="~/Assets/img/computerStorage/ssd3.jpg" />
+                </div>
+            </a>
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">SSD 3</h2>
+                        <h5 class="card-subtitle"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <button class="float-left btn btn-link btn-primary animation-on-hover">Details</button>
+                <button id="btnItem3" class="float-right btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(3)">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div id="item4" name="item" class="card">
+            <a href="~/Assets/img/computerStorage/ssd4.jpg" target="_blank" class="card-link">
+                <div class="card-img-top">
+                    <img class="card-img image-list" src="~/Assets/img/computerStorage/ssd4.jpg" />
+                </div>
+            </a>
+            <div class="card-header ">
+                <div class="row">
+                    <div class="col-sm-6 text-left">
+                        <h2 class="card-title">SSD 4</h2>
+                        <h5 class="card-subtitle"></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <button class="float-left btn btn-link btn-primary animation-on-hover">Details</button>
+                <button id="btnItem4" class="float-right btn btn-primary btn-simple animation-on-hover" onclick="chooseItem(4)">Ajouter</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="float-lg-left">
+                    <a href="StorageTypeChoice" class="btn btn-primary btn-simple animation-on-hover">Précédent</a>
+                </div>
+                <div class="float-lg-right">
+                    <a href="ConfigStorage" class="btn btn-primary animation-on-hover">Suivant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/configurator.js"></script>

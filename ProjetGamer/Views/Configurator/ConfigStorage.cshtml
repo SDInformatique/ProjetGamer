@@ -64,7 +64,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm-6">
-                        <a href="StorageChoice" class="btn btn-primary btn-simple animation-on-hover">Suivant</a>
+                        <a href="StorageTypeChoice" class="btn btn-primary btn-simple animation-on-hover">Choisir</a>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm-6">
-                        <a href="StorageChoice" class="btn btn-primary btn-simple animation-on-hover">Suivant</a>
+                        <a href="StorageTypeChoice" class="btn btn-primary btn-simple animation-on-hover">Choisir</a>
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-12">
-                        <button class="btn btn-primary btn-simple animation-on-hover">
+                        <button class="btn btn-primary btn-simple animation-on-hover" onclick="addDisk()">
                             <i class="material-icons btn-icon" aria-hidden="true">add</i>
                             <span class="">Ajouter</span>
                         </button>
@@ -112,12 +112,13 @@
         <div class="card">
             <div class="card-body">
                 <div class="float-lg-left">
-                    <button type="reset" class="btn btn-primary btn-simple animation-on-hover">Annuler</button>
+                    <a href="ConfigComponents" class="btn btn-primary btn-simple animation-on-hover">Précédent</a>
                 </div>
                 <div class="float-lg-right">
-                    <a href="ConfigStorage" class="btn btn-primary animation-on-hover ">Suivant</a>
+                    <a href="" class="btn btn-primary animation-on-hover">Suivant</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script type="text/javascript" src="~/Scripts/configurator.js"></script>
