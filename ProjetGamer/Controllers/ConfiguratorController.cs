@@ -22,7 +22,10 @@ namespace ProjetGamer.Controllers
             return View();
         }
 
-
+        public ActionResult ConfigChecklist()
+        {
+            return View();
+        }
 
 
         public ActionResult CaseChoice()
@@ -37,10 +40,17 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
-        public ActionResult StorageChoice()
+        public ActionResult StorageTypeChoice()
         {
             return View();
         }
-
+        public ActionResult HDDChoice()
+        {
+            return View();
+        }
+        public ActionResult SSDChoice()
+        {
+            return View();
+        }
     }
 }

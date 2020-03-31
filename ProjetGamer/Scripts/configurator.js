@@ -1,4 +1,4 @@
-﻿
+﻿/* General Funtion Section*/
 function chooseItem(id) {
     $('.selected-item').removeClass('selected-item');
     $('.disabled').removeClass('disabled');
@@ -16,4 +16,9 @@ function nextPage() {
         chooseItem: choosedItem
 
     });
+}
+
+/*Storage Section*/
+function addDisk() {
+    alert("Do that please");
 }
