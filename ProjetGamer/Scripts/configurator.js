@@ -12,10 +12,13 @@ function chooseItem(id) {
 
 function nextPage() {
     var choosedItem = document.getElementById('hiddenChoosedItem').value;
-    $.post("CpuChoice", {
-        chooseItem: choosedItem
-
-    });
+    $.ajax({
+        url: window.location.href,
+        type: 'POST',
+        dataType: 'text',
+        data: {
+            'choosedItem': choosedItem
+        }});
 }
 
 /*Storage Section*/

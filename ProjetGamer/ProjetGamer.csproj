@@ -161,6 +161,10 @@
     <Content Include="Assets\img\computerCases\Case8.png" />
     <Content Include="Assets\img\computerCases\Case9.jpg" />
     <Content Include="Assets\img\computerCases\Case10.jpg" />
+    <Content Include="Assets\img\computerRam\ram1.jpg" />
+    <Content Include="Assets\img\computerRam\ram2.jpg" />
+    <Content Include="Assets\img\computerRam\ram3.jpg" />
+    <Content Include="Assets\img\computerRam\ram4.jpg" />
     <Content Include="Assets\img\computerStorage\hdd1.jpg" />
     <Content Include="Assets\img\computerStorage\ssd1.jpg" />
     <Content Include="Assets\img\computerStorage\ssd2.jpg" />
@@ -224,7 +228,7 @@
     <Content Include="Views\Home\UserProfile.cshtml" />
     <Content Include="Views\Home\MyOrder.cshtml" />
     <Content Include="Views\Home\MyConfiguration.cshtml" />
-    <Content Include="Views\Configurator\ConfigComponents.cshtml" />
+    <Content Include="Views\Configurator\ConfigPrimaryComponents.cshtml" />
     <Content Include="Views\Configurator\CaseChoice.cshtml" />
     <Content Include="Views\Configurator\CpuChoice.cshtml" />
     <Content Include="Views\Configurator\GpuChoice.cshtml" />
@@ -234,10 +238,13 @@
     <Content Include="Views\Configurator\HDDChoice.cshtml" />
     <Content Include="Views\Configurator\SSDChoice.cshtml" />
     <Content Include="Views\Configurator\ConfigChecklist.cshtml" />
+    <Content Include="Views\Configurator\MotherboardChoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assets\img\computercpu\" />
+    <Folder Include="Assets\img\computerGpu\" />
+    <Folder Include="Assets\img\computerMotherboard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

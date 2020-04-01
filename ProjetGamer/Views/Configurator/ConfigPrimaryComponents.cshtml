@@ -2,14 +2,14 @@
 @{
     ViewBag.Title = "ConfigComponent";
     var configPrice = 2759;
-    var caseID = 0;
+    var mbID = 0;
     var cpuID = 0;
     var gpuID = 0;
 
 
-    if(Session["choosedCaseID"] != null)
+    if(Session["choosedMbID"] != null)
     {
-        caseID = Session["choosedCaseID"].ToString().AsInt();
+        mbID = Session["choosedMbID"].ToString().AsInt();
     }
 
 }
@@ -46,13 +46,13 @@
             <div class="card-header ">
                 <div class="row">
                     <div class="col-sm-12 text-left">
-                        <h2 class="card-title">Boitier</h2>
-                        <h5 class="card-subtitle">Veuillez choisir un boitier</h5>
+                        <h2 class="card-title">Carte Mère</h2>
+                        <h5 class="card-subtitle">Veuillez choisir une carte mère</h5>
                     </div>
                 </div>
             </div>
             <div class="card-body">
-                <a href="CaseChoice" class="btn btn-primary btn-simple animation-on-hover">Choisir</a>
+                <a href="MotherboardChoice" class="btn btn-primary btn-simple animation-on-hover">Choisir</a>
             </div>
         </div>
     </div>
@@ -61,20 +61,20 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col-sm-12 text-left">
-                        <h2 class="card-title">Boitier choisi</h2>
+                        <h2 class="card-title">Carte Mère choisi</h2>
                     </div>
                 </div>
             </div>
             <div class="card-body">
                 <div class="text-left">
                     @{
-                        if (caseID == 0)
+                        if (mbID == 0)
                         {
                             <h5 class="card-subtitle">Aucun</h5>
                         }
                         else
                         {
-                            <h5 class="card-subtitle">Boitier n @caseID </h5>
+                            <h5 class="card-subtitle">Carte Mère n @mbID </h5>
                         }
                     }
                 </div>
@@ -153,7 +153,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="float-lg-left">
-                    <button type="reset" class="btn btn-primary btn-simple animation-on-hover">Annuler</button>
+                    <a href="CaseChoice" class="btn btn-primary btn-simple animation-on-hover">Retour</a>
                 </div>
                 <div class="float-lg-right">
                     <a href="ConfigStorage" class="btn btn-primary animation-on-hover">Suivant</a>

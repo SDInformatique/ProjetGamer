@@ -13,7 +13,7 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
-        public ActionResult ConfigComponents()
+        public ActionResult ConfigPrimaryComponents()
         {
             return View();
         }
@@ -27,8 +27,13 @@ namespace ProjetGamer.Controllers
             return View();
         }
 
+        #region Choices
 
         public ActionResult CaseChoice()
+        {
+            return View();
+        }
+        public ActionResult MotherboardChoice()
         {
             return View();
         }
@@ -52,5 +57,6 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
+        #endregion
     }
 }

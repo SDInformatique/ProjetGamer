@@ -3,11 +3,11 @@
 
     if (IsPost)
     {
-        var choosedCase = Request.Form["hiddenChoosedCase"];
+        var choosedCase = Request.Form["choosedItem"];
         if(choosedCase != null)
         {
             Session.Add("choosedCaseID",choosedCase);
-            Response.Redirect("ConfigComponants");
+            Response.Redirect("ConfigPrimaryComponents");
         }
     }
 }
@@ -16,9 +16,9 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
-            <div class="card-header ">
+            <div class="card-header">
                 <div class="row">
-                    <div class="col-sm-6 text-left">
+                    <div class="col-sm-12 text-left">
                         <h2 class="card-title">Choix du boitier</h2>
                         <h5 class="card-subtitle">Veuillez choisir un boitier pour votre configuration</h5>
                     </div>
@@ -38,9 +38,9 @@
                     <img class="card-img image-list" src="~/Assets/img/computerCases/Case1.png" />
                 </div>
             </a>
-            <div class="card-header ">
+            <div class="card-header">
                 <div class="row">
-                    <div class="col-sm-6 text-left">
+                    <div class="col-sm-12 text-left">
                         <h2 class="card-title">Boitier 1</h2>
                         <h5 class="card-subtitle"></h5>
                     </div>
@@ -58,9 +58,9 @@
                     <img class="card-img image-list" src="~/Assets/img/computerCases/Case2.png" />
                 </div>
             </a>
-            <div class="card-header ">
+            <div class="card-header">
                 <div class="row">
-                    <div class="col-sm-6 text-left">
+                    <div class="col-sm-12 text-left">
                         <h2 class="card-title">Boitier 2</h2>
                         <h5 class="card-subtitle"></h5>
                     </div>
@@ -78,9 +78,9 @@
                     <img class="card-img image-list" src="~/Assets/img/computerCases/Case3.jpg" />
                 </div>
             </a>
-            <div class="card-header ">
+            <div class="card-header">
                 <div class="row">
-                    <div class="col-sm-6 text-left">
+                    <div class="col-sm-12 text-left">
                         <h2 class="card-title">Boitier 3</h2>
                         <h5 class="card-subtitle"></h5>
                     </div>
@@ -98,9 +98,9 @@
                     <img class="card-img image-list" src="~/Assets/img/computerCases/Case4.jpg" />
                 </div>
             </a>
-            <div class="card-header ">
+            <div class="card-header">
                 <div class="row">
-                    <div class="col-sm-6 text-left">
+                    <div class="col-sm-12 text-left">
                         <h2 class="card-title">Boitier 4</h2>
                         <h5 class="card-subtitle"></h5>
                     </div>
@@ -120,7 +120,7 @@
                     <a href="ConfigComponents" class="btn btn-primary btn-simple animation-on-hover">Retour</a>
                 </div>
                 <div class="float-lg-right">
-                    <a href="" onclick="nextPage()" class="btn btn-primary btn-simple animation-on-hover disabled">Suivant</a>
+                    <button onclick="nextPage()" class="btn btn-primary btn-simple animation-on-hover disabled">Suivant</button>
                 </div>
             </div>
         </div>
