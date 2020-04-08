@@ -29,8 +29,8 @@ function addDisk() {
 function saveItem() {
     var choosedItem = document.getElementById('hiddenChoosedItem').value;
     var itemName = location.pathname.split('/Configurator/');
-    localStorage.setItem(itemName, choosedItem);
+    localStorage.setItem(itemName[1], choosedItem);
 }
 function readStorageKey(key) {
-    var key
+    
 }
