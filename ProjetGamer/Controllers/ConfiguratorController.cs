@@ -41,6 +41,14 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
+        public ActionResult CpuCoolingChoice()
+        {
+            return View();
+        }
+        public ActionResult WatercoolingConfig()
+        {
+            return View();
+        }
         public ActionResult GpuChoice()
         {
             return View();
@@ -57,6 +65,11 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
+        public ActionResult PSUChoice()
+        {
+            return View();
+        }
+
         #endregion
     }
 }
