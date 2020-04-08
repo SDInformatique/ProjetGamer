@@ -2,35 +2,38 @@
 @{
     ViewBag.Title = "ConfigComponent";
     var configPrice = 2759;
-    var mbID = 0;
-    var cpuID = 0;
-    var gpuID = 0;
+    var mbID = "";
+    var cpuID = "";
+    var gpuID = "";
+    var psuID = "";
+    
+    mbID = Request.Form["mbID"];
+    cpuID = Request.Form["cpuID"];
+    gpuID = Request.Form["gpuID"];
+    psuID = Request.Form["psuID"];
 
-
-    if(Session["choosedMbID"] != null)
-    {
-        mbID = Session["choosedMbID"].ToString().AsInt();
-    }
-
+    
 }
+<script src="~/Scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
+
 
 <h1 class="title title-up">Composants Principaux</h1>
 
 <div class="row">
     <div class="col-12">
-        <div class="card">           
+        <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-sm-6">                  
+                    <div class="col-sm-6">
                         <h2 class="card-title">Résumé de la configuration</h2>
                     </div>
                 </div>
             </div>
-            
+
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h4 class="d-inline" >Prix Total :</h4>
+                        <h4 class="d-inline">Prix Total :</h4>
                         <h4 class="text-primary config-pricing d-inline"> @configPrice </h4>
                         <h4 class="d-inline"> chf</h4>
                     </div>
@@ -68,7 +71,7 @@
             <div class="card-body">
                 <div class="text-left">
                     @{
-                        if (mbID == 0)
+                        if (mbID == "" || mbID == null)
                         {
                             <h5 class="card-subtitle">Aucun</h5>
                         }
@@ -193,3 +196,26 @@
         </div>
     </div>
 </div>
+<form>
+    <input type="hidden" id="mbID" />
+    <input type="hidden" id="cpuID" />
+    <input type="hidden" id="gpuID" />
+    <input type="hidden" id="psuID" />
+</form>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        if (localStorage.getItem("MotherboardChoice") != null) {
+            document.getElementById("mbID").value = localStorage.getItem("MotherboardChoice"); 
+        }
+        if (localStorage.getItem("CpuChoice") != null) {
+            document.getElementById("cpuID").value = localStorage.getItem("CpuChoice");
+        }
+        if (localStorage.getItem("GpuChoice") != null) {
+            document.getElementById("gpuID").value = localStorage.getItem("GpuChoice");
+        }
+        if (localStorage.getItem("PsuChoice") != null) {
+            document.getElementById("psuID").value = localStorage.getItem("PsuChoice");
+        }
+    });
+</script>
