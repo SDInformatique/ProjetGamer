@@ -23,7 +23,22 @@ function nextPage() {
 
 /*Storage Section*/
 function addDisk() {
-    alert("Do that please");
+
+    var nbDiskSupp = document.getElementById("nbDiskSupp").value;
+
+    if (nbDiskSupp == 0) {
+        $("#thirdDisk").removeClass("d-none");
+        document.getElementById("nbDiskSupp").value = 1;
+    }
+    if (nbDiskSupp == 1) {
+        $("#diskSupp").addClass("d-none");
+        $("#forthDisk").removeClass("d-none");
+        document.getElementById("nbDiskSupp").value = 2;
+    }
+
+    
+
+    
 }
 
 function saveItem() {
