@@ -1,11 +1,11 @@
 ﻿
 @{
-    ViewBag.Title = "Gpu Choice";
+    ViewBag.Title = "Psu Choice";
 
     if (IsPost)
     {
-        var selectedCpu = Request.Form["chooseItem"];
-        Session.Add("selectedCpu", selectedCpu);
+        var selectedPsu = Request.Form["chooseItem"];
+        Session.Add("selectedPsu", selectedPsu);
         Response.Redirect("~/ConfigComponents");
     }
 }
@@ -17,8 +17,8 @@
             <div class="card-header ">
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                        <h2 class="card-title">Choix de la Carte Graphique</h2>
-                        <h5 class="card-subtitle">Veuillez choisir une carte graphique pour votre configuration</h5>
+                        <h2 class="card-title">Choix de la Alimentation</h2>
+                        <h5 class="card-subtitle">Veuillez choisir une alimentation pour votre configuration</h5>
                     </div>
                 </div>
             </div>
@@ -31,15 +31,15 @@
 <div class="row">
     <div class="col-lg-3 col-sm-6">
         <div id="item1" name="item" class="card">
-            <a href="~/Assets/img/computerGpu/Gpu1.jpg" target="_blank" class="card-link">
+            <a href="~/Assets/img/computerPsu/Psu1.jpg" target="_blank" class="card-link">
                 <div class="card-img-top">
-                    <img class="card-img image-list" src="~/Assets/img/computerGpu/Gpu1.jpg" />
+                    <img class="card-img image-list" src="~/Assets/img/computerPsu/Psu1.jpg" />
                 </div>
             </a>
             <div class="card-header ">
                 <div class="row">
                     <div class="col-sm-12 text-left">
-                        <h2 class="card-title">Carte Graphique 1</h2>
+                        <h2 class="card-title">Alimentation 1</h2>
                         <h5 class="card-subtitle"></h5>
                     </div>
                 </div>
@@ -51,15 +51,15 @@
     </div>
     <div class="col-lg-3 col-sm-6">
         <div id="item2" name="item" class="card">
-            <a href="~/Assets/img/computerGpu/gpu2.jpg" target="_blank" class="card-link">
+            <a href="~/Assets/img/computerPsu/psu2.jpg" target="_blank" class="card-link">
                 <div class="card-img-top">
-                    <img class="card-img image-list" src="~/Assets/img/computerGpu/Gpu2.jpg" />
+                    <img class="card-img image-list" src="~/Assets/img/computerPsu/Psu2.jpg" />
                 </div>
             </a>
             <div class="card-header ">
                 <div class="row">
                     <div class="col-sm-12 text-left">
-                        <h2 class="card-title">Carte Graphique 2</h2>
+                        <h2 class="card-title">Alimentation 2</h2>
                         <h5 class="card-subtitle"></h5>
                     </div>
                 </div>
@@ -71,15 +71,15 @@
     </div>
     <div class="col-lg-3 col-sm-6">
         <div id="item3" name="item" class="card">
-            <a href="~/Assets/img/computerGpu/gpu3.jpg" target="_blank" class="card-link">
+            <a href="~/Assets/img/computerPsu/psu3.jpg" target="_blank" class="card-link">
                 <div class="card-img-top">
-                    <img class="card-img image-list" src="~/Assets/img/computerGpu/Gpu3.jpg" />
+                    <img class="card-img image-list" src="~/Assets/img/computerPsu/Psu3.jpg" />
                 </div>
             </a>
             <div class="card-header ">
                 <div class="row">
                     <div class="col-sm-12 text-left">
-                        <h2 class="card-title">Carte Graphique 3</h2>
+                        <h2 class="card-title">Alimentation 3</h2>
                         <h5 class="card-subtitle"></h5>
                     </div>
                 </div>
@@ -91,15 +91,15 @@
     </div>
     <div class="col-lg-3 col-sm-6">
         <div id="item4" name="item" class="card">
-            <a href="~/Assets/img/computerGpu/gpu4.jpg" target="_blank" class="card-link">
+            <a href="~/Assets/img/computerPsu/psu4.jpg" target="_blank" class="card-link">
                 <div class="card-img-top">
-                    <img class="card-img image-list" src="~/Assets/img/computerGpu/Gpu4.jpg" />
+                    <img class="card-img image-list" src="~/Assets/img/computerPsu/Psu4.jpg" />
                 </div>
             </a>
             <div class="card-header ">
                 <div class="row">
                     <div class="col-sm-12 text-left">
-                        <h2 class="card-title">Carte Graphique 4</h2>
+                        <h2 class="card-title">Alimentation 4</h2>
                         <h5 class="card-subtitle"></h5>
                     </div>
                 </div>

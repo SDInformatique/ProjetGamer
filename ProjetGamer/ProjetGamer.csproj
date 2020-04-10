@@ -149,7 +149,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\icons\Case.png" />
     <Content Include="Assets\icons\CPU.png" />
+    <Content Include="Assets\icons\GPU.png" />
     <Content Include="Assets\icons\Motherboard.png" />
     <Content Include="Assets\img\computerCases\Case1.png" />
     <Content Include="Assets\img\computerCases\Case2.png" />
@@ -170,6 +172,9 @@
     <Content Include="Assets\img\computerStorage\ssd2.jpg" />
     <Content Include="Assets\img\computerStorage\ssd3.jpg" />
     <Content Include="Assets\img\computerStorage\ssd4.jpg" />
+    <Content Include="Assets\img\ShowCaseImg\Cooling\qualityFan.png" />
+    <Content Include="Assets\img\ShowCaseImg\Cooling\stockFan.png" />
+    <Content Include="Assets\img\ShowCaseImg\Cooling\watercooling.png" />
     <Content Include="Assets\img\ShowCaseImg\Storage\HDD.jpg" />
     <Content Include="Assets\img\computerStorage\hdd2.jpg" />
     <Content Include="Assets\img\computerStorage\hdd3.jpg" />
@@ -239,6 +244,11 @@
     <Content Include="Views\Configurator\SSDChoice.cshtml" />
     <Content Include="Views\Configurator\ConfigChecklist.cshtml" />
     <Content Include="Views\Configurator\MotherboardChoice.cshtml" />
+    <Content Include="Views\Configurator\PSUChoice.cshtml" />
+    <Content Include="Views\Configurator\CpuCoolingChoice.cshtml" />
+    <Content Include="Views\Configurator\WatercoolingConfig.cshtml" />
+    <Content Include="Views\Configurator\CustomWatercoolingConfig.cshtml" />
+    <Content Include="Views\Configurator\AirCoolingChoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
