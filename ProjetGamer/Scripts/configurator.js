@@ -49,3 +49,29 @@ function saveItem() {
 function readStorageKey(key) {
     
 }
+
+function checklistUpdate() {
+    if (window.localStorage.getItem("CaseChoice") == null) {
+        $("#caseCardBG").addClass("bg-info")
+    } else {
+        $("#caseCardBG").addClass("bg-success");
+    }
+
+    if (window.localStorage.getItem("MotherboardChoice") == null) {
+        $("#mbCardBG").addClass("bg-info")
+    } else {
+        $("#mbCardBG").addClass("bg-success");
+    }
+
+    if (window.localStorage.getItem("CpuChoice") == null) {
+        $("#cpuCardBG").addClass("bg-info")
+    } else {
+        $("#cpuCardBG").addClass("bg-success");
+    }
+
+    if (window.localStorage.getItem("GpuChoice") == null) {
+        $("#gpuCardBG").addClass("bg-info")
+    } else {
+        $("#gpuCardBG").addClass("bg-success");
+    }
+}
