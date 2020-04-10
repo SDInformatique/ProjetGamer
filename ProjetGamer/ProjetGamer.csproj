@@ -149,6 +149,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\icons\Case.png" />
     <Content Include="Assets\icons\CPU.png" />
     <Content Include="Assets\icons\Motherboard.png" />
     <Content Include="Assets\img\computerCases\Case1.png" />
@@ -245,6 +246,7 @@
     <Content Include="Views\Configurator\PSUChoice.cshtml" />
     <Content Include="Views\Configurator\CpuCoolingChoice.cshtml" />
     <Content Include="Views\Configurator\WatercoolingConfig.cshtml" />
+    <Content Include="Views\Configurator\CustomWatercoolingConfig.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
