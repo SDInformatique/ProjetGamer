@@ -248,6 +248,7 @@
     <Content Include="Views\Configurator\CpuCoolingChoice.cshtml" />
     <Content Include="Views\Configurator\WatercoolingConfig.cshtml" />
     <Content Include="Views\Configurator\CustomWatercoolingConfig.cshtml" />
+    <Content Include="Views\Configurator\AirCoolingChoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
