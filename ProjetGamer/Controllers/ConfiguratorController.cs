@@ -33,15 +33,22 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
+
         public ActionResult MotherboardChoice()
         {
             return View();
         }
+
+        #region CPU & CPU Cooling
         public ActionResult CpuChoice()
         {
             return View();
         }
         public ActionResult CpuCoolingChoice()
+        {
+            return View();
+        }
+        public ActionResult AirCoolingChoice()
         {
             return View();
         }
@@ -53,10 +60,14 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
+        #endregion
+
         public ActionResult GpuChoice()
         {
             return View();
         }
+
+        #region Storage
         public ActionResult StorageTypeChoice()
         {
             return View();
@@ -69,6 +80,7 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
+        #endregion
         public ActionResult PSUChoice()
         {
             return View();
