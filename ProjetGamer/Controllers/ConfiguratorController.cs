@@ -49,6 +49,10 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
+        public ActionResult CustomWatercoolingConfig()
+        {
+            return View();
+        }
         public ActionResult GpuChoice()
         {
             return View();
