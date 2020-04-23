@@ -52,6 +52,10 @@ namespace ProjetGamer.Controllers
         {
             return View();
         }
+        public ActionResult WatercoolingType()
+        {
+            return View();
+        }
         public ActionResult WatercoolingConfig()
         {
             return View();

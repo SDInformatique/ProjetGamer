@@ -172,6 +172,9 @@
     <Content Include="Assets\img\computerStorage\ssd2.jpg" />
     <Content Include="Assets\img\computerStorage\ssd3.jpg" />
     <Content Include="Assets\img\computerStorage\ssd4.jpg" />
+    <Content Include="Assets\img\homePage\slide1.jpg" />
+    <Content Include="Assets\img\homePage\slide3.jpg" />
+    <Content Include="Assets\img\homePage\slide2.jpg" />
     <Content Include="Assets\img\ShowCaseImg\Cooling\qualityFan.png" />
     <Content Include="Assets\img\ShowCaseImg\Cooling\stockFan.png" />
     <Content Include="Assets\img\ShowCaseImg\Cooling\watercooling.png" />
@@ -184,6 +187,9 @@
     <Content Include="Content\black-dashboard.min.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\nucleo-icons.css" />
+    <Content Include="Content\OwlSlider\owl.carousel.min.css" />
+    <Content Include="Content\OwlSlider\owl.carousel.min.js" />
+    <Content Include="Content\OwlSlider\owl.theme.default.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -246,9 +252,10 @@
     <Content Include="Views\Configurator\MotherboardChoice.cshtml" />
     <Content Include="Views\Configurator\PSUChoice.cshtml" />
     <Content Include="Views\Configurator\CpuCoolingChoice.cshtml" />
-    <Content Include="Views\Configurator\WatercoolingConfig.cshtml" />
+    <Content Include="Views\Configurator\WatercoolingType.cshtml" />
     <Content Include="Views\Configurator\CustomWatercoolingConfig.cshtml" />
     <Content Include="Views\Configurator\AirCoolingChoice.cshtml" />
+    <Content Include="Views\Configurator\WatercoolingConfig.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
