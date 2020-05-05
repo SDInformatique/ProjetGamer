@@ -1,5 +1,5 @@
 ﻿@{ 
-    bool isLogged = true;
+    bool isLogged = false;
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -73,19 +73,24 @@
                         <hr />
                     </li>
                     <li>
-                        <a href="/Home/UserProfile">
-                            <i class="tim-icons icon-puzzle-10"></i>
                             @{
                                 if (isLogged == true)
                                 {
-                                    <p>Profil</p>
+                                    <a href="/Home/UserProfile">
+                                        <i class="tim-icons icon-puzzle-10"></i>
+                                        <p>Profil</p>
+                                    </a>
+                                    
                                 }
                                 else
                                 {
-                                    <p>Se connecter</p>
+                                    <a href="/Home/login">
+                                        <i class="tim-icons icon-puzzle-10"></i>
+                                        <p>Se connecter</p>
+                                    </a>
+                                    
                                 }
                             }
-                        </a>
                     </li>
                     @{
                         if (isLogged == true)

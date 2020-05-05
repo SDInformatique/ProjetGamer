@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Login";
+
+    if (IsPost)
+    {
+        
+        var loginEmail = Request.Form["loginEmail"];
+        var loginPassword = Request.Form["loginPassword"];
+        var chkRemember = Request.Form["chkRemember"];
+    }
+
+}
+
+
+<div class="spacer-tb-2"></div>
+<div class="spacer-b-1"></div>
+<div class="spacer-tb-2"></div>
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <div class="card vertical-align-10">
+            <div class="card-header">
+                <h4 class="title">Login</h4>
+            </div>
+            <div class="card-body">
+                <form method="post" action="Login">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Adresse E-mail</label>
+                                <input id="loginEmail" type="text" class="form-control" placeholder="E-mail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Mot de Passe</label>
+                                <input id="loginPassword" type="text" class="form-control" placeholder="Mot de passe">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-check">
+                                
+                                <label class="form-check-label">
+                                    <input id="chkRemember" type="checkbox" class="form-check-input" />
+                                    Ce rappeler de moi
+                                    <span class="form-check-sign"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spacer-tb-2"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-simple animation-on-hover">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spacer-tb-2">
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-inline-flex">
+                                <h6><a href="Register"> Créer un compte ICI</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

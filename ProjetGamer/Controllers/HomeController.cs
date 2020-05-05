@@ -42,5 +42,16 @@ namespace ProjetGamer.Controllers
             ViewBag.Message = "Vos Configuration";
             return View();
         }
+
+        public ActionResult Login()
+        {
+            ViewBag.Message = "Login";
+            return View();
+        }
+        public ActionResult Register()
+        {
+            ViewBag.Message = "Register";
+            return View();
+        }
     }
 }
